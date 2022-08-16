@@ -30,6 +30,4 @@ package_bootsplash-theme-xivastudio() {
 
   install -Dm644 "$srcdir/bootsplash-xivastudio" "$pkgdir/usr/lib/firmware/bootsplash-themes/xivastudio/bootsplash"
   install -Dm644 "$srcdir/bootsplash-xivastudio.initcpio_install" "$pkgdir/usr/lib/initcpio/install/bootsplash-xivastudio"
-  cp -R "$srcdir/usr" "$pkgdir/"
-
 } 
