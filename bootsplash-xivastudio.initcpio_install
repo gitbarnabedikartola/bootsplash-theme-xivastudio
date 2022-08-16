@@ -1,6 +1,6 @@
 build() {
         # add tux bootsplash
-	add_binary /usr/lib/firmware/bootsplash-themes/biglinux/bootsplash /usr/lib/firmware/bootsplash-themes/biglinux/bootsplash
+	add_binary /usr/lib/firmware/bootsplash-themes/xivastudio/bootsplash /usr/lib/firmware/bootsplash-themes/xivastudio/bootsplash
 }
 
 help() {
