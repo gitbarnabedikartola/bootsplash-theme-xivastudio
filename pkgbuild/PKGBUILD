@@ -1,0 +1,36 @@
+pkgbase=bootsplash-themes
+pkgname=('bootsplash-theme-biglinux')
+pkgver=0.1
+pkgrel=3
+url="https://github.com/BarnabediKartola/bootsplash-theme-biglinux.git"
+arch=('x86_64')
+license=('GPL')
+
+depends=("bootsplash-systemd" "bootsplash-manager")
+builddepends=('imagemagick')
+options=('!libtool' '!emptydirs')
+
+source=('bootsplash-packer'
+	'bootsplash-biglinux.sh'
+	'bootsplash-biglinux.initcpio_install'
+	'logo.gif')
+
+sha256sums=('SKIP'
+            'SKIP'
+            'SKIP'
+            'SKIP')
+install=post.install
+build() {
+  cd "$srcdir"
+  sh ./bootsplash-biglinux.sh
+}
+
+package_bootsplash-theme-biglinux() {
+  pkgdesc="Bootsplash Theme with biglinux logo"
+  cd "$srcdir"
+
+  install -Dm644 "$srcdir/bootsplash-biglinux" "$pkgdir/usr/lib/firmware/bootsplash-themes/biglinux/bootsplash"
+  install -Dm644 "$srcdir/bootsplash-biglinux.initcpio_install" "$pkgdir/usr/lib/initcpio/install/bootsplash-biglinux"
+#   cp -R "$srcdir/usr" "$pkgdir/"
+
+} 
