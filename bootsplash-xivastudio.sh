@@ -8,10 +8,8 @@
 
 LOGO=logo.gif
 
-LOGO_WIDTH=$(identify $LOGO | head -1 | cut -d " " -f 3 | \
-						cut -d x -f 1)
-LOGO_HEIGHT=$(identify $LOGO | head -1 | cut -d " " -f 3 | \
-						cut -d x -f 2)
+LOGO_WIDTH=320
+LOGO_HEIGHT=320
 
 convert -alpha remove \
 	-background "#000000" \
