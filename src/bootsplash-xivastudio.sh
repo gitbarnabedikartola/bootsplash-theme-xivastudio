@@ -1,0 +1,1 @@
+/run/media/barnabe/xivastudio-Exter/repositorio/manjaro/xiva-studio/bootsplash-theme-xivastudio/bootsplash-xivastudio.sh
